@@ -1,0 +1,38 @@
+name: ✨ New Feature
+description: Suggest an idea
+title: "Write the title here"
+labels:
+  - enhancement
+
+body:
+  - type: checkboxes
+    attributes:
+      label: Is there an existing issue for this?
+      description: Make sure to check if this issue is a duplicate.
+      options:
+        - label: I have searched the existing issues
+          required: true
+  - type: textarea
+    attributes:
+      label: Pain
+      description: Explain the pain you're experiencing.
+      placeholder: I don't like that I've to do this / I'd like to have that
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Suggested solution
+      description: Tell us about a solution you can think of
+      placeholder: You could add that / change this / use that
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Useful resources
+      description: Provide us with some useful resource which could help us implement your suggestion.
+  - type: textarea
+    attributes:
+      label: Additional information
+      description: Anything else you'd like to include?
+    validations:
+      required: false

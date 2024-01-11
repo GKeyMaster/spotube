@@ -1,0 +1,73 @@
+name: 🐛 Bug
+description: Report a bug or an incorrect behavior
+title: "Write the title here"
+labels:
+  - bug
+
+body:
+  - type: checkboxes
+    attributes:
+      label: Is there an existing issue for this?
+      description: Make sure to check if this issue is a duplicate.
+      options:
+        - label: I have searched the existing issues
+          required: true
+  - type: textarea
+    attributes:
+      label: Current Behavior
+      description: Write what you are experiencing currently.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected Behavior
+      description: Write what you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
+      description: Steps to reproduce the issue. A not well written description might delay the resolve of it.
+      placeholder: |
+        1. I opened the app
+        2. I did this
+        3. And that
+        4. Then this happened
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Operating System
+      description: The OS in which you used Spotube to face the issue.
+      placeholder: Android, Linux, macOS or Windows? Make sure to include the version too.
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Spotube version
+      description: In which version of Spotube did you encounter this bug?
+      placeholder: (e.g.) v3.0.0
+  - type: dropdown
+    attributes:
+      label: Installation source
+      description: Where did you install Spotube from?
+      multiple: true
+      options:
+        - "Website (spotube.netlify.app) or (spotube.krtirtho.dev)"
+        - "GitHub Releases (Binary)"
+        - "GitHub Actions (Nightly Binary)"
+        - "Play Store (Android)"
+        - "F-Droid (Android)"
+        - "Arch User Repository (AUR)"
+        - "Flathub (Flatpak)"
+        - "chocolatey (Windows)"
+        - "WinGet (Windows)"
+        - "Scoop (Windows)"
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Additional information
+      description: Anything else you'd like to include?
+    validations:
+      required: false
